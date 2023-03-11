@@ -1,0 +1,8 @@
+.navBar {
+  @apply h-20 backdrop-blur-md;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.link {
+  @apply text-white text-opacity-50 text-base font-medium cursor-pointer
+}

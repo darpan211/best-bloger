@@ -1,0 +1,36 @@
+.desc{
+    height: 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+.backdrop{
+    height: 58px;
+    width:100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.googleBackdrop{
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+}
+.firefoxBackdrop{
+    background: rgb(194 190 181 / 92%) !important
+}
+.headingText {
+  @apply text-5xl lg:text-[68px] font-black text-center mt-24;
+  background: linear-gradient(95.06deg, #E61AEF 0%, #FFDE13 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.devideBorder{
+    margin-top: 6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}

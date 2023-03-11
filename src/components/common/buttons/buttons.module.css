@@ -1,0 +1,29 @@
+.gradient__btn {
+  @apply text-white flex items-center justify-center py-4 px-7 bg-center w-[108px] h-[40px] rounded-[100px] bg-cover text-lg;
+  background-image: url("../../../../public/images/main-bg.png");
+}
+
+.opacity__btn {
+  color: white !important;
+  border: 0;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.icon_round {
+  background: rgba(255, 255, 255, 0.2);
+  width: 32px;
+  height: 32px;
+}
+.message_round {
+  background: rgba(255, 255, 255, 0.05);
+  width: 32px;
+  height: 32px;
+}
+.border_tranparent{
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.border_white{
+  border-color: rgba(255, 255, 255, 0.20) !important;
+  color: #FAFAFA;
+}

@@ -1,0 +1,10 @@
+.footer {
+  @apply pt-16 pb-12;
+  background: rgba(255, 255, 255, 0.02);
+  /* color: white; */
+}
+
+.rightReservedContainer {
+  @apply w-9/12 mx-auto flex justify-center mt-16;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

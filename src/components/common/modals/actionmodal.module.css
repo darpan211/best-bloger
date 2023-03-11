@@ -1,0 +1,67 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#00000080;
+  }
+  
+  .actionDialogue{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 767px;
+    transform: translateX(-50%);
+    background-color: #0C0A1FCC;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 18px;
+    z-index: 10;
+    backdrop-filter: blur(24px);
+  }
+  
+  .deleteCommentDialogue{
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+    left: 50%;
+    width: 100%;
+    max-width: 767px;
+    transform: translateX(-50%);
+    background-color: #0C0A1FE5;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(24px);
+    padding-bottom: 250px !important;
+  }
+  
+  .reportCommentDialogue{
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    overflow-y: auto;
+      height: 100vh;
+    left: 50%;
+    width: 100%;
+    max-width: 767px;
+    transform: translateX(-50%);
+    background-color: #0C0A1FE5;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(24px);
+    padding-bottom: 100px !important;
+  }
+  
+  .padding48{
+    padding: 48px;
+  }
+  
+  .mb40{
+    margin-bottom: 250px !important;
+  }
+  
+  .mb20{
+    margin-bottom: 99px !important;
+  }

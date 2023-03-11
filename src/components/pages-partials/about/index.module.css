@@ -1,0 +1,44 @@
+
+.about {
+  display: block;
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #8655E1;
+  margin-bottom: 10px;
+ 
+}
+
+.descSecond {
+  display: block;
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 24px;
+  text-align: center;
+  color: #8655E1;
+  margin-bottom: 10px;
+
+}
+.desc{
+    height: 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    margin-top: 24px;
+}
+
+.section{
+  @apply flex flex-col h-auto sm:h-[208px] w-full relative  rounded-[16px] mt-8 mb-24 p-4 sm:px-[80px] justify-center bg-white bg-opacity-5 z-10 max-w-7xl mx-auto;
+}

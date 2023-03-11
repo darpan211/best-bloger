@@ -1,0 +1,11 @@
+.input{
+    @apply block w-full border-gray-300 text-white resize-none focus:border-transparent focus:ring-0;
+    background: rgba(255, 255, 255, 0.05) !important;
+    /* border: 1px solid rgba(255, 255, 255, 0.05) !important; */
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05) !important;
+    /* border-radius: 8px; */
+    min-width: 35px;
+  }
+  .input:focus{
+    outline: none;
+  }

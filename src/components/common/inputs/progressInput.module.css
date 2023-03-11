@@ -1,0 +1,47 @@
+.sliderThumb {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 16.4%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.sliderThumb::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 20px;
+  border-radius: inherit;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 0px 5px;
+  top: -2em;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 5px;
+  left: 1rem;
+}
+
+.progress {
+  width: 16.4%;
+  height: 0.8em;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  pointer-events: none;
+}

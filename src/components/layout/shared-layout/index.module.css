@@ -1,0 +1,99 @@
+.middleRightCorner {
+  width: 708px;
+  height: 652px;
+  position: absolute;
+  right: 0;
+  top:40%
+}
+.middleRightCorner img{
+  position: absolute;
+  top: 40%;
+}
+.bottomRightCorner {
+  width: 708px;
+  height: 652px;
+  position: absolute;
+  right: 0;
+  bottom:0
+}
+.bottomRightCorner img{
+  position: absolute;
+  bottom: 0;
+}
+.topRightCorner {
+  @apply md:bg-[url('/images/background/top-right.png')] bg-cover;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  width: 708px;
+  height: 652px;
+}
+
+.middleLeftCorner {
+  position: absolute;
+  width: 708px;
+  height: 652px;
+  left: 0;
+  bottom: 20%;
+}
+.leftBottomCorner {
+  position: absolute;
+  width: 708px;
+  height: 652px;
+  left: 0;
+  top: 1067px;
+}
+.termsLeftBottomCorner {
+  position: absolute;
+  width: 708px;
+  height: 500px;
+  left: 0;
+  bottom: 0;
+}
+.resourceLeftBottomCorner {
+  position: absolute;
+  width: 708px;
+  height: 652px;
+  left: 0;
+  bottom: 200px;
+}
+.bottomRight {
+  width: 708px;
+  height: 652px;
+  right: 0;
+  bottom: 0;
+  filter: blur(350px);
+  background-image: url("/images/main-bg.png");
+  position: absolute;
+}
+
+.bottomLeftCorner{
+  position: absolute;
+  width: 708px;
+  height: 652px;
+  left: 0;
+  bottom: 0;
+}
+.topRightCornerBg {
+  @apply bg-[url('/images/background/top-right.png')] bg-cover;
+  position: absolute;
+  right: 0;
+  width: 708px;
+  height: 652px;
+}
+.directorSectionBg{
+  @apply absolute right-0 top-[1300px];
+}
+.discoverSectionBg{ 
+  position: absolute;
+  left: 0;
+  top: 3100px;
+}
+.carouselRightBg{
+  position: absolute;
+  right: 0;
+  bottom: 2200px;
+}
+.carouselLeftBg {
+ @apply absolute left-0 bottom-[1800px];
+}

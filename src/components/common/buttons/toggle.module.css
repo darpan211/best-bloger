@@ -1,0 +1,8 @@
+.btn {
+  @apply block rounded-md border-gray-300 text-white;
+  /* background: rgba(255, 255, 255, 0.05) !important; */
+}
+.btnTime{
+  @apply block rounded-md border-gray-300 text-white;
+  background: #0E0B21 !important;
+}

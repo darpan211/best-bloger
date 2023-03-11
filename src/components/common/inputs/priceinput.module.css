@@ -1,0 +1,25 @@
+.priceinput {
+  @apply block w-full border-gray-300 text-white;
+  background: rgba(255, 255, 255, 0.05);
+  min-width: 50px;
+  height: 42px;
+}
+
+.priceinput:focus {
+  outline: none;
+}
+
+.priceinput2 {
+  @apply block w-full border-gray-300 text-white;
+  background: rgba(255, 255, 255, 0.05);
+  min-width: 20px;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  font-size: 18px;
+  font-family: revert;
+  font-weight: 700;
+}
+
+.priceinput2:focus {
+  outline: none;
+}
