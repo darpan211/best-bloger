@@ -8,14 +8,17 @@ import Pagination from "@/components/common/pagination/resourcePagination";
 
 const Resource = ({ allBlogInfo, allCollectionInfo }) => {
   const isFirefox = typeof InstallTrigger !== "undefined";
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(allBlogInfo);
   const [activePage, setActivePage] = useState(1);
   const [itemPerPage, setItemPerPage] = useState(9);
   const [pageData, setPageData] = useState([]);
+  const [catData, setCatData] = useState(allBlogInfo)
   const [email, setEmail] = useState(null);
   const [allData, setAllData] = useState([]);
   const [collection, setCollection] = useState([]);
+  const [searchTitle, setSearchTitle] = useState("");
   const pageTopRef = useRef(null);
+
   const emailSubscription = async () => {
     const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     if (email && email.length > 0 && email.match(isValidEmail)) {
@@ -40,26 +43,46 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
   }, [allBlogInfo]);
 
 
+  useEffect(() => {
+    if (data) {
+      console.log("allBlogInfo", allBlogInfo);
+      const result = catData.filter(val => {
+        return val.title.toLowerCase().match(searchTitle.toLowerCase());
+      });
+      setData(result)
+      const newOffset = (0) * itemPerPage;
+      setPageData(result.slice(newOffset, newOffset + itemPerPage))
+    }
+  }, [searchTitle]);
+
 
   console.log("collection", collection);
 
   const onChange = (e) => {
 
-    setData(allBlogInfo)
-    setPageData(allBlogInfo)
 
     if (e.target.value !== 'All') {
       const filterData = (allData || []).filter(item => item.collection.toLowerCase().includes((e.target.value).toLowerCase()))
       setData(filterData)
-      setPageData(filterData)
+      const newOffset = (0) * itemPerPage;
+      setPageData(filterData.slice(newOffset, newOffset + itemPerPage))
+      setCatData(filterData)
       if (filterData.length === 0) {
 
       }
     } else {
       setData(allBlogInfo)
+      setCatData(allBlogInfo)
       const newOffset = (0) * itemPerPage;
+      console.log("allBlogInfo.slice(newOffset, newOffset + itemPerPage)", allBlogInfo.slice(newOffset, newOffset + itemPerPage).length);
       setPageData(allBlogInfo.slice(newOffset, newOffset + itemPerPage))
     }
+  }
+
+
+
+  const search = (e) => {
+    setSearchTitle(e.target.value)
   }
 
 
@@ -80,12 +103,12 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
           <p className="text-gray-300 text-[20px] mt-3 md:block hidden text-center">
             Articles, tips, guides, industry best practices, and news.
           </p>
-          <div className="flex justify-center mt-5">
+          <div className="sm:flex justify-center mt-5 gap-10 sm:px-2 px-10">
 
             <select
               id="message-type"
               name="message-type"
-              className=" right-0 z-10 mt-1 md:w-[500px] w-[80%] origin-top-right bg-transparent rounded-md  shadow-lg ring-1 focus:ring-gray-900 ring-gray-600 text-gray-300  focus:border-gray-300 outline-none focus:outline-none"
+              className=" right-0 z-10 mt-1 md:w-[300px] sm:w-[60%] w-full origin-top-right bg-transparent rounded-md  shadow-lg ring-1 focus:ring-gray-900 ring-gray-600 text-gray-300  focus:border-gray-300 outline-none focus:outline-none"
               onChange={(e) => { onChange(e) }}
             >
               {collection && collection.map((coll) => {
@@ -94,7 +117,17 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
                 )
               })}
             </select>
+            <input
+              id="message-type"
+              name="message-type"
+              placeholder="Search Title"
+              className=" right-0 z-10 mt-1 pl-2 sm:mt-0 mt-5 md:w-[300px] sm:w-[60%] py-2 w-full origin-top-right bg-transparent rounded-md  shadow-lg ring-1 focus:ring-gray-900 ring-gray-600 text-gray-300  focus:border-gray-300 outline-none focus:outline-none"
+              onChange={(e) => { search(e) }}
+            >
+            </input>
           </div>
+
+
 
 
           <div>

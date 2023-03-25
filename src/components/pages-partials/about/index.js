@@ -2,7 +2,6 @@ import { Container } from "@/components/components/Container";
 import TotalUserCount from "@/components/TotalUserCount";
 import SharedLayout from "../../layout/shared-layout";
 import styles from "./index.module.css";
-import TitleSvg from "./title-svg";
 
 
 
@@ -12,46 +11,44 @@ const About = () => {
       <SharedLayout title="about" className="pt-20">
         <div className="">
           <Container className='md:px-8 px-6'>
-            <div className="relative">
+            <div className="">
               <div className="mx-auto text-lg">
                 <div className="flex items-center w-full justify-center px-4 flex-col">
                   <div className={styles.about}>About us</div>
-                  <h1 className={styles.title}>
-                    <TitleSvg />
-                  </h1>
+
                   <div className={`${styles.desc} `}>
-                    No more payment discrimination, no more evil shenanigans.
+                    Welcome to our blog! We're a team of passionate writers who love to share our knowledge and experiences with our readers.
                   </div>
                 </div>
               </div>
 
 
-              <section className="container mx-auto px-6 p-10">
+              <section className="container mx-auto px-6 p-10 ">
                 <div className="flex items-center flex-wrap mb-20">
                   <div className="w-full md:w-1/2 md:pr-10">
-                    <h4 className={`${styles.descSecond} text-3xl font-bold mb-3`}>Vortex</h4>
-                    <p className="text-gray-200 mb-8">Their primary target will be the power generators. Prepare to open the shield. Sir, Rebel ships are coming into our sector. Good. Our first catch of the day. Stand by, ion control....Fire! The first transport is away.</p>
+                    <h4 className={`${styles.descSecond} text-3xl font-bold mb-3`}>Our mission</h4>
+                    <p className="text-gray-200 mb-8">Our mission is to provide high-quality, informative, and engaging content on a variety of topics, ranging from technology and science to lifestyle and entertainment. We believe that everyone deserves to have access to reliable information that can help them make better decisions and improve their lives.</p>
                   </div>
                   <div className="w-full md:w-1/2">
-                    <img className="rounded-lg" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="Vortex" />
+                    <img className="rounded-lg w-full" src="https://images.unsplash.com/photo-1638866411782-5f59287c19e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWlzc2lvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Mission" />
                   </div>
                 </div>
                 <div className="flex items-center flex-wrap mb-20">
                   <div className="w-full md:w-1/2">
-                    <img className="rounded-lg" src="https://www.thesun.co.uk/wp-content/uploads/2019/06/SWJFO-EAPlay-08-1.jpg" alt="use the force" />
+                    <img className="rounded-lg w-full" src="https://images.unsplash.com/photo-1562577308-c8b2614b9b9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Team" />
                   </div>
                   <div className="w-full md:w-1/2 md:pl-10">
-                    <h4 className={`${styles.descSecond} text-3xl font-bold mb-3`}>Use the Force!</h4>
-                    <p className="text-gray-200 mb-8">We'll never get it out now. So certain are you. Always with you it cannot be done. Hear you nothing that I say? Master, moving stones around is one thing. This is totally different. No! No different!</p>
+                    <h4 className={`${styles.descSecond} text-3xl font-bold mb-3`}>Our Team</h4>
+                    <p className="text-gray-200 mb-8">Our team consists of experts in their respective fields who bring their unique perspectives and insights to our articles. We're committed to conducting thorough research and fact-checking to ensure the accuracy and credibility of our content.</p>
                   </div>
                 </div>
                 <div className="flex items-center flex-wrap mb-20">
                   <div className="w-full md:w-1/2 md:pr-10">
-                    <h4 className={`${styles.descSecond} text-3xl font-bold mb-3`}>Life creates it</h4>
-                    <p className="text-gray-200 mb-8">There is no try. I can't. It's too big. Size matters not. Look at me. Judge me by my size, do you? Hm? Mmmm. And well you should not. For my ally in the Force. And a powerful ally it is.</p>
+                    <h4 className={`${styles.descSecond} text-3xl font-bold mb-3`}>Stay up-to-date</h4>
+                    <p className="text-gray-200 mb-8">Whether you're looking to learn something new, stay up-to-date with the latest trends, or simply enjoy some entertaining reads, we've got you covered. We also encourage our readers to share their thoughts and opinions in the comments section, as we believe that constructive discussions can enrich everyone's understanding of the topics we cover.</p>
                   </div>
                   <div className="w-full md:w-1/2">
-                    <img className="rounded-lg" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Ferikkain%2Ffiles%2F2018%2F01%2FRey-Luke.jpg" alt="Syncing" />
+                    <img className="rounded-lg w-full" src="https://images.unsplash.com/photo-1570872309681-828bdb21903c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3RheSUyMHVwJTIwdG8lMjBkYXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Syncing" />
                   </div>
                 </div>
               </section>
@@ -59,12 +56,11 @@ const About = () => {
               <div className={styles.section}>
                 <div className="flex items-center sm:items-start justify-between mb-[15px]">
                   <div className="sm:text-[48px] text-[18px] text-white font-semibold leading-[0.8]">
-                    Start earning today!
+                    Reach out to us!
                   </div>
                 </div>
                 <div className="sm:text-[24px] font-medium text-[16px] text-white text-opacity-80">
-                  Join the future of online content creation, sign up and start
-                  earning today.
+                  Thank you for visiting our blog, and we hope you enjoy reading our articles as much as we enjoy writing them. If you have any questions, feedback, or suggestions for future topics, please don't hesitate to reach out to us.
                 </div>
               </div>
             </div>

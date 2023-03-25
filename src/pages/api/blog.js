@@ -26,11 +26,12 @@ export const fetchBlogBySlug = async (slug) => {
 export const fetchAllCollection = async () => {
     return await axios.get(`${blogUrl}/collection`).then((res) => {
         const jsonTables = HtmlTableToJson.parse(res.data);
-        console.log("jsonTables", jsonTables);
-        return jsonTables?.results[0]
+        const secondElement = jsonTables?.results[0].filter((item) => item.collection !== "Others");
+        secondElement.push({ "collection": "Others" });
+        console.log("secondElement", secondElement);
+        return secondElement
     }).catch((e) => {
         console.log("e is", e);
         return e
     })
-   
 }

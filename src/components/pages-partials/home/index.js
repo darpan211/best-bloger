@@ -10,6 +10,7 @@ import {
 } from "@/components/animation";
 import { motion } from "framer-motion";
 import TotalUserCount from "@/components/TotalUserCount";
+import Link from 'next/link'
 
 
 const HomeUi = ({ allBlogInfo }) => {
@@ -48,11 +49,11 @@ const HomeUi = ({ allBlogInfo }) => {
       <div className="fontInter text-center md:text-left">
         <Container>
           <>
-            <div className="py-20 bg-cover bg-no-repeat bg-fixed" style={{ backgroundImage: "url(https://media.vanityfair.com/photos/5ce426151c0b0773cacd1121/master/pass/star-wars-feature-vf-2019-summer-embed-05.jpg)" }}>
+            <div className="py-20 bg-cover bg-no-repeat bg-fixed" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)" }}>
               <div className="container m-auto text-center px-6 opacity-100">
-                <h2 className="text-4xl font-bold mb-2 text-white">Echo Base...I've got something!</h2>
-                <h3 className="text-2xl mb-8 text-gray-200">Not much, but it could be a life form. This is Rouge Two. this is Rouge Two. Captain Solo, so you copy?</h3>
-                <button className="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:border-transparent hover:text-blue-500 hover:bg-gray-800 transition-all">Commander Skywalker, do you copy?</button>
+                <h2 className="text-4xl font-bold mb-2 text-white"> Welcome to My Blog</h2>
+                <h3 className="text-2xl mb-8 text-gray-200">This is a place where I share my thoughts and ideas about various topics.</h3>
+                <Link href="/"><button className="bg-pink-500 text-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:border-transparent hover:text-blue-500 hover:bg-gray-800 transition-all"> Check out my latest posts</button></Link>
               </div>
             </div>
           </>
@@ -67,32 +68,33 @@ const HomeUi = ({ allBlogInfo }) => {
             <section className="container mx-auto px-6 p-10">
               <div className="flex items-center flex-wrap mb-20">
                 <div className="w-full md:w-1/2 md:pr-10">
-                  <h4 className={`${styles.headingText} text-3xl font-bold mb-3`}>Oct</h4>
-                  <p className="text-gray-200 mb-8">Their primary target will be the power generators. Prepare to open the shield. Sir, Rebel ships are coming into our sector. Good. Our first catch of the day. Stand by, ion control....Fire! The first transport is away.</p>
+                  <h4 className={`${styles.headingText} text-3xl font-bold mb-3`}>Our mission</h4>
+                  <p className="text-gray-200 mb-8">Our mission is to provide high-quality, informative, and engaging content on a variety of topics, ranging from technology and science to lifestyle and entertainment. We believe that everyone deserves to have access to reliable information that can help them make better decisions and improve their lives.</p>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <img className="rounded-lg" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="Vortex" />
+                  <img className="rounded-lg" src="https://images.unsplash.com/photo-1638866411782-5f59287c19e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWlzc2lvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Mission" />
                 </div>
               </div>
               <div className="flex items-center flex-wrap mb-20">
                 <div className="w-full md:w-1/2">
-                  <img className="rounded-lg" src="https://www.thesun.co.uk/wp-content/uploads/2019/06/SWJFO-EAPlay-08-1.jpg" alt="use the force" />
+                  <img className="rounded-lg" src="https://images.unsplash.com/photo-1562577308-c8b2614b9b9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Team" />
                 </div>
                 <div className="w-full md:w-1/2 md:pl-10">
-                  <h4 className={`${styles.headingText} text-3xl font-bold mb-3`}>Use the Force!</h4>
-                  <p className="text-gray-200 mb-8">We'll never get it out now. So certain are you. Always with you it cannot be done. Hear you nothing that I say? Master, moving stones around is one thing. This is totally different. No! No different!</p>
+                  <h4 className={`${styles.headingText} text-3xl font-bold mb-3`}>Our Team</h4>
+                  <p className="text-gray-200 mb-8">Our team consists of experts in their respective fields who bring their unique perspectives and insights to our articles. We're committed to conducting thorough research and fact-checking to ensure the accuracy and credibility of our content.</p>
                 </div>
               </div>
               <div className="flex items-center flex-wrap mb-20">
                 <div className="w-full md:w-1/2 md:pr-10">
-                  <h4 className={`${styles.headingText} text-3xl font-bold mb-3`}>Life creates it</h4>
-                  <p className="text-gray-200 mb-8">There is no try. I can't. It's too big. Size matters not. Look at me. Judge me by my size, do you? Hm? Mmmm. And well you should not. For my ally in the Force. And a powerful ally it is.</p>
+                  <h4 className={`${styles.headingText} text-3xl font-bold mb-3`}>Stay up-to-date</h4>
+                  <p className="text-gray-200 mb-8">Whether you're looking to learn something new, stay up-to-date with the latest trends, or simply enjoy some entertaining reads, we've got you covered. We also encourage our readers to share their thoughts and opinions in the comments section, as we believe that constructive discussions can enrich everyone's understanding of the topics we cover.</p>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <img className="rounded-lg" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Ferikkain%2Ffiles%2F2018%2F01%2FRey-Luke.jpg" alt="Syncing" />
+                  <img className="rounded-lg" src="https://images.unsplash.com/photo-1570872309681-828bdb21903c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3RheSUyMHVwJTIwdG8lMjBkYXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Syncing" />
                 </div>
               </div>
             </section>
+
 
 
           </motion.div>
@@ -144,9 +146,9 @@ const HomeUi = ({ allBlogInfo }) => {
 
               <section className="mt-7 bg-[#e0defa]">
                 <div className="container mx-auto px-6 text-center py-20">
-                  <h2 className="mb-6 text-4xl font-bold text-center text-[#0a0536]">Headquarters personnel</h2>
-                  <h3 className="my-4 text-2xl text-gray-600">Report to command center. Take it easy.</h3>
-                  <button className="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:border-red hover:text-white hover:bg-[#0a0536]">Report</button>
+                  <h2 className="mb-6 text-4xl font-bold text-center text-[#0a0536]">About Me</h2>
+                  <h3 className="my-4 text-2xl text-gray-600">Hi, my name is Jane and I'm a blogger who loves to write about technology and culture. I hope you enjoy my blog!</h3>
+                  <Link href={"/contact"}><button className="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:border-red hover:text-white hover:bg-[#0a0536]">Contact us</button></Link>
                 </div>
               </section>
             </motion.div>
