@@ -1,1 +1,1 @@
-export const blogUrl = 'https://blog-with-user.vercel.app'
+export const blogUrl = 'https://blog-with-user-git-main-kishanvaghani.vercel.app/'
