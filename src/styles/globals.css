@@ -24,3 +24,7 @@ input[type='email']:disabled {
   padding-left: 5px !important;
   padding-right: 5px !important
 }
+
+.blog-page > * {
+    padding: 10px 0;
+}
