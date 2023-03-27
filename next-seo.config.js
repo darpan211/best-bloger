@@ -9,7 +9,7 @@ export default {
         site_name: 'Blogs',
         images: [
             {
-                url: './public/images/best-blogger.jpeg',
+                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq_sqpey7taRC0_BL3bPm1CTRZ1vbKkyGoULJdku8nLQ&usqp=CAU&ec=48600112',
                 width: 800,
                 height: 600,
                 alt: 'Og Image Alt',
