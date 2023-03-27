@@ -83,7 +83,19 @@ const BlogPost = ({ blogInfo, allBlogInfo }) => {
     title: `Blog | ${data?.title}`,
     description: `${data?.description}`,
     openGraph: {
-      url: `${data?.coverImage}`
+      title: `Blog | ${data?.title}`,
+      description: `${data?.description}`,
+      locale: 'en_IE',
+      url: `https://beastbloger.com/`,
+      site_name: 'Blogs',
+      images: [
+        {
+          url: `${data?.coverImage}`,
+          width: 800,
+          height: 600,
+          alt: 'Og Image Alt',
+        },
+      ],
     }
   }
 
