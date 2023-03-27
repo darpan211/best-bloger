@@ -6,7 +6,6 @@ const ProgressInput = ({ value, setValue, isBlur, isProfile = false }) => {
   const tooltipRef = useRef();
 
   const progressChangeHandler = ({ target }) => {
-    console.log('arget.value', target.value)
     if (target.value > 3) {
       setValue(target.value);
       const tooltip = tooltipRef.current.children[0];

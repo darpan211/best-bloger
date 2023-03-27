@@ -22,7 +22,6 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
   const emailSubscription = async () => {
     const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     if (email && email.length > 0 && email.match(isValidEmail)) {
-      console.log(email);
       await firebaseSubscribeToNewsLetter(email);
       alert("Subscriber add successfully")
       setEmail("");
@@ -45,7 +44,6 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
 
   useEffect(() => {
     if (data) {
-      console.log("allBlogInfo", allBlogInfo);
       const result = catData.filter(val => {
         return val.title.toLowerCase().match(searchTitle.toLowerCase());
       });
@@ -55,8 +53,6 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
     }
   }, [searchTitle]);
 
-
-  console.log("collection", collection);
 
   const onChange = (e) => {
 
@@ -74,7 +70,6 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
       setData(allBlogInfo)
       setCatData(allBlogInfo)
       const newOffset = (0) * itemPerPage;
-      console.log("allBlogInfo.slice(newOffset, newOffset + itemPerPage)", allBlogInfo.slice(newOffset, newOffset + itemPerPage).length);
       setPageData(allBlogInfo.slice(newOffset, newOffset + itemPerPage))
     }
   }

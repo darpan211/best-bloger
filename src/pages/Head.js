@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import data from '../../public/db.json';
-console.log(data, "data==========");
 function Heads() {
   return (
     <>

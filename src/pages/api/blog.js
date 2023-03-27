@@ -7,7 +7,6 @@ export const fetchAllBlog = async () => {
         const jsonTables = HtmlTableToJson.parse(res.data);
         return jsonTables?.results[0].reverse()
     }).catch((e) => {
-        console.log("e is", e);
         return e
     })
 }
@@ -17,7 +16,6 @@ export const fetchBlogBySlug = async (slug) => {
         const jsonTables = HtmlTableToJson.parse(res.data);
         return jsonTables?.results[0]
     }).catch((e) => {
-        console.log("e is", e);
         return e
     })
 }
@@ -28,10 +26,8 @@ export const fetchAllCollection = async () => {
         const jsonTables = HtmlTableToJson.parse(res.data);
         const secondElement = jsonTables?.results[0].filter((item) => item.collection !== "Others");
         secondElement.push({ "collection": "Others" });
-        console.log("secondElement", secondElement);
         return secondElement
     }).catch((e) => {
-        console.log("e is", e);
         return e
     })
 }

@@ -12,7 +12,6 @@ const Card = ({ data }) => {
   return (
     <div className="fontInter w-full px-2 mt-7 mx-auto">
       <div className="rounded-lg relative w-full h-[280px]">
-        {console.log("data?.coverImage", (data.coverImage).slice(0, 5))}
         <Link href={`/blog/${data?.slug}`}>
 
           <img

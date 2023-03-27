@@ -1,6 +1,6 @@
 export default {
     title: "Blogs",
-    description: "Blods created with Next.js and tailwind",
+    description: "Welcome to Blogs, your go-to source for Topics. Our team of expert writers share informative and engaging articles on AI, games, Machine Learning, providing you with the latest news, tips, and insights to help you Achieve Specific Goals Join our community today and stay informed on all things.",
     openGraph: {
         type: 'website',
         locale: 'en_IE',
@@ -8,7 +8,7 @@ export default {
         site_name: 'Blogs',
         images: [
             {
-                url: '../../',
+                url: './public/images/best-blogger.jpeg',
                 width: 800,
                 height: 600,
                 alt: 'Og Image Alt',

@@ -29,8 +29,6 @@ const encodeImageToBlurhash = async imageUrl => {
 const encodesPixelsToABlurhashString= async (img) => {
   const blurHash = await encodeImageToBlurhash(img);
   const validRes = isBlurhashValid(blurHash);
-  console.log("blurHash",blurHash) 
-  console.log("validRes",validRes) 
   return blurHash
 };
 
