@@ -81,10 +81,10 @@ const BlogPost = ({ blogInfo, allBlogInfo }) => {
 
   const SEO = {
     title: `Blog | ${data?.title}`,
-    description: ``,
+    description: "",
     openGraph: {
       title: `Blog | ${data?.title}`,
-      description: ``,
+      description: "",
       locale: 'en_IE',
       url: `https://beastbloger.com/`,
       site_name: 'Blogs',
