@@ -1,23 +1,20 @@
-import Input from '@/components/common/inputs/input'
-import PopoverButton from '@/components/common/popover'
-import FacebookIcon from '@/components/svgs/facebook'
-import LinkShareIcon from '@/components/svgs/link-share-icon'
-import LinkedinIcon from '@/components/svgs/linkedin-icon'
-import Share from '@/components/svgs/share/ShareIcon'
-import TwitterIcon from '@/components/svgs/twitter'
+import PopoverButton from '@/components/common/popover';
+import FacebookIcon from '@/components/svgs/facebook';
+import LinkShareIcon from '@/components/svgs/link-share-icon';
+import LinkedinIcon from '@/components/svgs/linkedin-icon';
+import Share from '@/components/svgs/share/ShareIcon';
+import TwitterIcon from '@/components/svgs/twitter';
 import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from "react-share";
-import React, { useEffect, useState } from 'react'
-import SharedLayout from '../../layout/shared-layout'
-import ProductsCarousel from '../home/products-carousel'
-import styles from '../privacy/index.module.css'
-import { useRouter } from 'next/router'
+import React, { useEffect, useState } from 'react';
+import SharedLayout from '../../layout/shared-layout';
+import styles from '../privacy/index.module.css';
+import { useRouter } from 'next/router';
 import moment from "moment";
-import markdownToHtml from './markdownToHtml'
-import './index.module.css'
+import markdownToHtml from './markdownToHtml';
+import './index.module.css';
 import { blogUrl } from "@/utils/blog";
 import { toast } from 'react-hot-toast';
 import { NextSeo } from 'next-seo'
-import TotalUserCount from '@/components/TotalUserCount'
 
 const BlogPost = ({ blogInfo, allBlogInfo }) => {
   const [data, setData] = useState({})
