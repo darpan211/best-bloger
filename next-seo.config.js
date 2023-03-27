@@ -9,7 +9,7 @@ export default {
         site_name: 'Blogs',
         images: [
             {
-                url: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+                url: 'https://www.facebook.com/images/fb_icon_325x325.png',
                 width: 800,
                 height: 600,
                 alt: 'Og Image Alt',
