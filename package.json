@@ -23,7 +23,7 @@
     "html-table-to-json": "^1.0.0",
     "moment": "^2.29.4",
     "next": "12.2.5",
-    "next-seo": "^5.11.1",
+    "next-seo": "^5.15.0",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",

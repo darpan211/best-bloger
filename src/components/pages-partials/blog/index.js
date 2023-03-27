@@ -76,29 +76,24 @@ const BlogPost = ({ blogInfo, allBlogInfo }) => {
     asyncData();
   }, [id, blogInfo, allBlogInfo])
 
-  const SEO = {
-    title: `Blog | ${data?.title}`,
-    description: "",
-    openGraph: {
-      title: `Blog | ${data?.title}`,
-      description: "",
-      locale: 'en_IE',
-      url: `https://beastbloger.com/`,
-      site_name: 'Blogs',
-      images: [
-        {
-          url: `${(`${blogUrl}/`).concat(data?.coverImage)}`,
-          width: 800,
-          height: 600,
-          alt: 'Og Image Alt',
-        },
-      ],
-    }
-  }
-
   return (
     <>
-      <NextSeo {...SEO} />
+      <NextSeo
+        title={'Blog |' + data?.title}
+        description=""
+        openGraph={{
+          title: `Blog | ${ data?.title }`,
+          description:"",
+          images: [
+            {
+              url: `${(`${blogUrl}/`).concat(data?.coverImage)}`,
+              alt: 'Og Image Alt',
+              width: 800,
+              height: 600
+            },
+          ],
+        }}
+      />
       <SharedLayout>
         <div className='fontInter px-4 max-w-[90rem] mx-auto'>
           <div className='lg:w-[830px] mx-auto text-center lg:pt-[88px] pt-12'>

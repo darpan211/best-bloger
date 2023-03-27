@@ -15,11 +15,6 @@ export default {
                 height:600
             },
         ],
-    },
-    twitter: {
-        handle: 'null',
-        site: 'null',
-        cardType: 'summary_large_image',
     }
 };
 
