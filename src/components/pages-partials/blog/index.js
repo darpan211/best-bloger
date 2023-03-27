@@ -90,7 +90,7 @@ const BlogPost = ({ blogInfo, allBlogInfo }) => {
       site_name: 'Blogs',
       images: [
         {
-          url: `${data?.coverImage}`,
+          url: `${(`${blogUrl}/`).concat(data?.coverImage)}`,
           width: 800,
           height: 600,
           alt: 'Og Image Alt',
