@@ -11,6 +11,8 @@ export default {
             {
                 url: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
                 alt: 'Og Image Alt',
+                width:800,
+                height:600
             },
         ],
     },
@@ -20,3 +22,5 @@ export default {
         cardType: 'summary_large_image',
     }
 };
+
+
