@@ -86,7 +86,7 @@ const BlogPost = ({ blogInfo, allBlogInfo }) => {
           description:"",
           images: [
             {
-              url: `${(`${blogUrl}/`).concat(data?.coverImage)}`,
+              url: `${data?.coverImage}`,
               alt: 'Og Image Alt',
               width: 800,
               height: 600
