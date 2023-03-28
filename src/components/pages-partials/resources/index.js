@@ -5,6 +5,7 @@ import SharedLayout from "../../layout/shared-layout";
 import Card from "./cards/ResourceCard";
 import styles from "./index.module.css";
 import Pagination from "@/components/common/pagination/resourcePagination";
+import { NextSeo } from "next-seo";
 
 const Resource = ({ allBlogInfo, allCollectionInfo }) => {
   const isFirefox = typeof InstallTrigger !== "undefined";
@@ -88,94 +89,114 @@ const Resource = ({ allBlogInfo, allCollectionInfo }) => {
     setActivePage(pageNumber);
     pageTopRef.current.scrollIntoView();
   };
+
   return (
-    <SharedLayout title="Blogs" className="mt-10">
-      <div className="fontInter" ref={pageTopRef}>
-        <div className="container-main xs:px-8 px-1">
-          <div className={styles.headingText}>
-            <h1>Blogs</h1>
-          </div>
-          <p className="text-gray-300 text-[20px] mt-3 md:block hidden text-center">
-            Articles, tips, guides, industry best practices, and news.
-          </p>
-          <div className="sm:flex justify-center mt-5 gap-10 sm:px-2 px-10">
-
-            <select
-              id="message-type"
-              name="message-type"
-              className=" right-0 z-10 mt-1 md:w-[300px] sm:w-[60%] w-full origin-top-right bg-transparent rounded-md  shadow-lg ring-1 focus:ring-gray-900 ring-gray-600 text-gray-300  focus:border-gray-300 outline-none focus:outline-none"
-              onChange={(e) => { onChange(e) }}
-            >
-              {collection && collection.map((coll) => {
-                return (
-                  <option className="text-gray-300  bg-[#0E0125] border-none outline-none  block px-4 py-2 text-sm cursor-pointer" value={coll.collection}>{coll.collection}</option>
-                )
-              })}
-            </select>
-            <input
-              id="message-type"
-              name="message-type"
-              placeholder="Search Title"
-              className=" right-0 z-10 mt-1 pl-2 sm:mt-0 mt-5 md:w-[300px] sm:w-[60%] py-2 w-full origin-top-right bg-transparent rounded-md  shadow-lg ring-1 focus:ring-gray-900 ring-gray-600 text-gray-300  focus:border-gray-300 outline-none focus:outline-none"
-              onChange={(e) => { search(e) }}
-            >
-            </input>
-          </div>
-
-
-
-
-          <div>
-            <div
-              className={`grid gap-4 mx-auto px-4 mt-10 ${isFirefox ? "lg:gap-8" : "lg:gap-4"
-                } md:gap-6 lg:grid-cols-3 grid-cols-1 md:grid-cols-2 sm:grid-rows-9 md:grid-row-5 lg:grid-rows-auto`}
-            >
-              {(pageData || [])?.map((content, i) => (
-                <Card key={i} data={content} classes={"mx-auto"} />
-              ))}
+   <>
+    <NextSeo
+        title="Blogs"
+        description="Welcome to Blogs, your go-to source for Topics. Our team of expert writers share informative and engaging articles on AI, games, Machine Learning, providing you with the latest news, tips, and insights to help you Achieve Specific Goals Join our community today and stay informed on all things."
+        openGraph={{
+          title: 'Blogs',
+          description: 'Welcome to Blogs, your go-to source for Topics. Our team of expert writers share informative and engaging articles on AI, games, Machine Learning, providing you with the latest news, tips, and insights to help you Achieve Specific Goals Join our community today and stay informed on all things.',
+          images: [
+            {
+              url: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+              alt: 'Og Image Alt',
+              width: 800,
+              height: 600
+            },
+          ],
+        }}
+      />
+      <SharedLayout title="Blogs" className="mt-10">
+        <div className="fontInter" ref={pageTopRef}>
+          <div className="container-main xs:px-8 px-1">
+            <div className={styles.headingText}>
+              <h1>Blogs</h1>
             </div>
-            {data.length > itemPerPage && (
-              <div className={""}>
-                <Pagination
-                  activePage={activePage}
-                  handlePageChange={handlePageChange}
-                  projectList={data}
-                  itemPerPage={itemPerPage}
-                />
+            <p className="text-gray-300 text-[20px] mt-3 md:block hidden text-center">
+              Articles, tips, guides, industry best practices, and news.
+            </p>
+            <div className="sm:flex justify-center mt-5 gap-10 sm:px-2 px-10">
+
+              <select
+                id="message-type"
+                name="message-type"
+                className=" right-0 z-10 mt-1 md:w-[300px] sm:w-[60%] w-full origin-top-right bg-transparent rounded-md  shadow-lg ring-1 focus:ring-gray-900 ring-gray-600 text-gray-300  focus:border-gray-300 outline-none focus:outline-none"
+                onChange={(e) => { onChange(e) }}
+              >
+                {collection && collection.map((coll) => {
+                  return (
+                    <option className="text-gray-300  bg-[#0E0125] border-none outline-none  block px-4 py-2 text-sm cursor-pointer" value={coll.collection}>{coll.collection}</option>
+                  )
+                })}
+              </select>
+              <input
+                id="message-type"
+                name="message-type"
+                placeholder="Search Title"
+                className=" right-0 z-10 mt-1 pl-2 sm:mt-0 mt-5 md:w-[300px] sm:w-[60%] py-2 w-full origin-top-right bg-transparent rounded-md  shadow-lg ring-1 focus:ring-gray-900 ring-gray-600 text-gray-300  focus:border-gray-300 outline-none focus:outline-none"
+                onChange={(e) => { search(e) }}
+              >
+              </input>
+            </div>
+
+
+
+
+            <div>
+              <div
+                className={`grid gap-4 mx-auto px-4 mt-10 ${isFirefox ? "lg:gap-8" : "lg:gap-4"
+                  } md:gap-6 lg:grid-cols-3 grid-cols-1 md:grid-cols-2 sm:grid-rows-9 md:grid-row-5 lg:grid-rows-auto`}
+              >
+                {(pageData || [])?.map((content, i) => (
+                  <Card key={i} data={content} classes={"mx-auto"} />
+                ))}
               </div>
-            )}
-          </div>
-          <div className="fontInter mx-auto bg-white/[0.05] rounded-lg mt-14">
-            <div className="lg:px-[96px] lg:py-[48px] md:px-8 md:py-5 p-2 lg:flex justify-between flex-row  ">
-              <div>
-                <p className="md:text-[48px] text-3xl mb-5 text-white">
-                  Stay in the Know
-                </p>
-                <p className="text-white/[0.5]">
-                  Get the latest news, blogs, Creators and <br /> exclusive
-                  events straight to your inbox!
-                </p>
-              </div>
-              <div className="flex items-center pt-5">
-                <Input
-                  classes={"w-[270px] h-[44px] px-2"}
-                  placeholder={"Enter your email"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <button
-                  onClick={emailSubscription}
-                  className="bg-[#6938EF] text-white py-2 px-4 rounded-lg ml-4"
-                >
-                  Subscribe
-                </button>
+              {data.length > itemPerPage && (
+                <div className={""}>
+                  <Pagination
+                    activePage={activePage}
+                    handlePageChange={handlePageChange}
+                    projectList={data}
+                    itemPerPage={itemPerPage}
+                  />
+                </div>
+              )}
+            </div>
+            <div className="fontInter mx-auto bg-white/[0.05] rounded-lg mt-14">
+              <div className="lg:px-[96px] lg:py-[48px] md:px-8 md:py-5 p-2 lg:flex justify-between flex-row  ">
+                <div>
+                  <p className="md:text-[48px] text-3xl mb-5 text-white">
+                    Stay in the Know
+                  </p>
+                  <p className="text-white/[0.5]">
+                    Get the latest news, blogs, Creators and <br /> exclusive
+                    events straight to your inbox!
+                  </p>
+                </div>
+                <div className="flex items-center pt-5">
+                  <Input
+                    classes={"w-[270px] h-[44px] px-2"}
+                    placeholder={"Enter your email"}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <button
+                    onClick={emailSubscription}
+                    className="bg-[#6938EF] text-white py-2 px-4 rounded-lg ml-4"
+                  >
+                    Subscribe
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-
-      </div>
-    </SharedLayout>
+      </SharedLayout>
+   </>
+    
   );
 };
 
