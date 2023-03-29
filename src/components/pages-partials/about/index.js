@@ -3,8 +3,6 @@ import TotalUserCount from "@/components/TotalUserCount";
 import SharedLayout from "../../layout/shared-layout";
 import styles from "./index.module.css";
 
-
-
 const About = () => {
   return (
     <>
