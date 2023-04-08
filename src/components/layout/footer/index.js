@@ -39,7 +39,6 @@ const Footer = () => {
           </div>
         </footer>
         <div className="flex">
-        <a href="https://www.sigmatraffic.com/?ref=171750">Free website traffic generator</a>
           <TotalUserCount />
         </div>
       </div>
